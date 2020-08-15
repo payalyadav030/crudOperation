@@ -1,0 +1,40 @@
+<div class="col-md-6 mx-auto">
+    <h1>Student Table</h1>
+   
+    <div>
+
+    <input type="text" class="form-control username" placeholder="username"/>
+    <input type="text" class="form-control name" placeholder="name"/>
+    <input type="text"  class="form-control age" placeholder="age"/>
+    <input type="text" class="form-control city" placeholder="city"/>
+    </div>
+     <button class="btn btn-success add">Add</button>
+    
+    <br/>
+    <table class="table table-striped">
+        <tbody class="tbody">
+            {{#each data}}
+            <tr id={{this._id}}> 
+               
+                <td>{{this.username}} </td>
+                <td>{{this.name}}</td>
+                <td>{{this.age}}</td>
+                <td>{{this.city}}</td> 
+                
+                <td >
+
+                     <button class="btn btn-danger delete" id={{this._id}}>Delete</button>
+
+                </td>
+               
+                
+                
+            </tr>
+                
+
+            {{/each}}
+        </tbody>
+       
+    </table>
+        
+</div>
